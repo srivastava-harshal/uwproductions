@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400&display=swap");
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 0.25rem;
+  background-color: #e4e4e4;
+  border-radius: 50vh;
+  cursor: pointer;
+}
+
+.dot.dot-active {
+  background-color: #424242;
+}

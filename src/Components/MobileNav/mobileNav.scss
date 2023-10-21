@@ -1,0 +1,38 @@
+.mobile_navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e4e4e4;
+  z-index: 2;
+  padding: 15px 0;
+
+  &_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+  }
+}
+
+.drawer_image {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.ant-drawer {
+  position: static;
+  top: 0;
+  left: 250px;
+  width: 200px;
+  height: 300px;
+}
+
+.ant-drawer-content-wrapper {
+  width: 270px;
+}

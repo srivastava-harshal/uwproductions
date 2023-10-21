@@ -1,0 +1,108 @@
+#HomepageFooter {
+  position: relative;
+  margin-top: 100px;
+}
+
+.footer {
+  &_container {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    background-color: rgb(221, 221, 221);
+    // padding: 0 30px;
+  }
+
+  &_info {
+    &_container {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // padding: 70px 0;
+    }
+
+    &_left_section,
+    &_right_section {
+      width: 50%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    &_contactUs {
+      // padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      &_header {
+        font-size: 1.2rem;
+        letter-spacing: 0.6px;
+      }
+    }
+
+    &_information {
+      // padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      &_link {
+        font-size: 16px;
+      }
+
+      &_header {
+        font-size: 1.2rem;
+        letter-spacing: 0.6px;
+      }
+    }
+  }
+
+  &_content {
+    // padding: 70px 0;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_social_links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 10px;
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &_header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &_social_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_image {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      background-color: white;
+    }
+  }
+}
+
+.homepage_footer_whiteBG {
+  background-color: white;
+  height: 400px;
+}

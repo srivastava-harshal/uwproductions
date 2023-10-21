@@ -1,0 +1,58 @@
+#Overview {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 120px 85px;
+
+  @media screen and (max-width: 420px) {
+    padding: 30px 40px;
+  }
+}
+
+.overview {
+  &_image {
+    // height: 250px;
+    width: 95%;
+    object-fit: cover;
+    border-radius: 20px;
+
+    &_container {
+      display: flex !important;
+      justify-content: center;
+    }
+  }
+
+  &_header {
+    display: flex;
+    justify-content: center;
+
+    &_text {
+      font-size: 2.5rem;
+      letter-spacing: 4px;
+      font-weight: 200;
+
+      @media screen and (max-width: 420px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.slick-list {
+  padding: 50px 0;
+}
+
+.slick-prev {
+  left: -35px;
+}
+
+.slick-prev:before {
+  //   content: "←";
+  color: red;
+  font-size: 30px;
+}
+
+.slick-next:before {
+  //   content: "→";
+  color: red;
+  font-size: 30px;
+}

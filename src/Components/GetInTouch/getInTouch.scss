@@ -1,0 +1,90 @@
+#GetInTouch {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+}
+
+.getInTouch {
+  &_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    background: beige;
+    padding: 20px 60px 20px 0;
+    border-radius: 10px;
+  }
+
+  &_contactUs {
+    &_chat {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 50%;
+      padding-top: 5px;
+      padding-right: 65px;
+    }
+
+    &_header {
+      font-size: 2.5rem;
+      font-weight: 200;
+    }
+
+    &_sub_header {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    &_form_request {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    &_form {
+      width: 60%;
+      // padding: 20px 160px 20px 0;
+    }
+
+    &_form_btn_wrapper {
+      display: flex;
+      justify-content: end;
+      padding: 0 70px;
+    }
+
+    &_form_btn_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 50px;
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    &_form_btn {
+      // padding: 20px 160px 20px 0;
+      font-size: 20px;
+    }
+  }
+
+  &_container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &_header {
+    padding-top: 30px;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  &_sub_header {
+    padding-top: 20px;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+}

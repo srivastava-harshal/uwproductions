@@ -48,23 +48,24 @@ export default function CarouselComp({ slides: sourceSlides = [] }) {
   };
 
   return (
-    <div
-      style={{
-        width: "70%",
-        height: "250px",
-        margin: "0 auto",
-        padding: "30px 0",
-      }}
-    >
-      <Carousel
-        ref={ref}
-        slides={slides}
-        goToSlide={state.goToSlide}
-        offsetRadius={state.offsetRadius}
-        showNavigation={state.showNavigation}
-        animationConfig={state.config}
-      />
-
+    <div>
+      <div
+        style={{
+          width: window.innerWidth > 820 ? "70%" : "100%",
+          height: "250px",
+          margin: "0 auto",
+          padding: "30px 0 0",
+        }}
+      >
+        <Carousel
+          ref={ref}
+          slides={slides}
+          goToSlide={state.goToSlide}
+          offsetRadius={state.offsetRadius}
+          showNavigation={state.showNavigation}
+          animationConfig={state.config}
+        />
+      </div>
       <Dots
         slides={slides}
         currentSlide={currentSlide >= slides.length ? 0 : currentSlide}

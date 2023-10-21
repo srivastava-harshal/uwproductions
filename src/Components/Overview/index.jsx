@@ -9,7 +9,7 @@ const Overview = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: window.innerWidth > 820 ? 4 : 2,
     slidesToScroll: 1,
   };
 

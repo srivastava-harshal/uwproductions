@@ -1,10 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Drawer } from "antd";
 
 import "./mobileNav.scss";
 
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0 && !scrolled) {
+        setScrolled(true);
+      } else if (window.scrollY === 0 && scrolled) {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
 
   const showDrawer = () => {
     setOpen(true);
@@ -15,7 +32,7 @@ const MobileNav = () => {
   };
 
   return (
-    <div className="mobile_navbar">
+    <div className={`${scrolled ? "Mobile_Navbar_Scrolled" : "Mobile_Navbar"}`}>
       <div className="mobile_navbar_wrapper">
         <div className="mobile_navbar_container">
           <p className="mobile_navbar_header">ULTRAWIDE</p>

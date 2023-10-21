@@ -1,10 +1,27 @@
-.mobile_navbar {
+.Mobile_Navbar {
   display: flex;
   justify-content: space-between;
-  background-color: #e4e4e4;
+  position: fixed;
+  top: 0;
+  width: 100vw;
   z-index: 2;
   padding: 15px 0;
+  background: transparent;
+  color: #e4e4e4;
+}
 
+.Mobile_Navbar_Scrolled {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 2;
+  padding: 15px 0;
+  background-color: #e4e4e4;
+}
+
+.mobile_navbar {
   &_wrapper {
     width: 100%;
     display: flex;
@@ -23,16 +40,20 @@
   width: 40px;
   height: 40px;
   margin-right: 15px;
+  filter: invert(1);
 }
 
 .ant-drawer {
-  position: static;
+  position: fixed;
   top: 0;
-  left: 250px;
-  width: 200px;
-  height: 300px;
+  width: 100vw;
+  height: 100vh;
 }
 
-.ant-drawer-content-wrapper {
-  width: 270px;
+// .ant-drawer-content-wrapper {
+//   width: 270px;
+// }
+
+.Mobile_Navbar_Scrolled .drawer_image {
+  filter: none;
 }

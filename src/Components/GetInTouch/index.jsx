@@ -9,7 +9,7 @@ const GetInTouch = () => {
     <div className="GetInTouch" id="GetInTouch">
       <div className="getInTouch_wrapper">
         <div className="getInTouch_container">
-          <p className="getInTouch_header">Get In Touch</p>
+          <p className="getInTouch_header">Get In Touch!</p>
           <p className="getInTouch_sub_header">Discuss the project</p>
         </div>{" "}
         <div className="getInTouch_contactUs_form">
@@ -23,7 +23,8 @@ const GetInTouch = () => {
             layout="horizontal"
             //   disabled={componentDisabled}
             style={{
-              width: 700,
+              width: window.innerWidth > 820 ? 500 : "90vw",
+              padding: "20px 0",
             }}
           >
             <Form.Item label="Name">

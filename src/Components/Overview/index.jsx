@@ -19,9 +19,9 @@ const Overview = () => {
         <p className="overview_header_text">RECENT WORKS</p>
       </div>
       <Slider {...settings}>
-        {images.map(({ imageURL }) => {
+        {images.map(({ imageURL, key }) => {
           return (
-            <div className="overview_image_container">
+            <div key={key} className="overview_image_container">
               <img className="overview_image" src={imageURL} />
             </div>
           );

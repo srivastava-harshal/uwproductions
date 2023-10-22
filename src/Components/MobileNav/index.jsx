@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Drawer } from "antd";
+import { NavLink } from "react-router-dom";
 
 import "./mobileNav.scss";
 
@@ -53,10 +54,20 @@ const MobileNav = () => {
         onClose={onClose}
         open={open}
       >
-        <p>Home</p>
-        <p>Work</p>
-        <p>About</p>
-        <p>Contact Us</p>
+        <div className="mobile_nav_links">
+          <NavLink className="mobile_nav_link_home" to="/">
+            Home
+          </NavLink>
+          <NavLink className="mobile_nav_link_work" to="/work">
+            Work
+          </NavLink>
+          <NavLink className="mobile_nav_link_about" to="/about">
+            About
+          </NavLink>
+          <NavLink className="mobile_nav_link_contact" to="/contactus">
+            Contact
+          </NavLink>
+        </div>
       </Drawer>
     </div>
   );

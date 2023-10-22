@@ -1,16 +1,25 @@
 #ContactUs {
   display: flex;
   padding: 100px 120px 85px;
+
+  @media screen and (max-width: 420px) {
+    padding: 50px 0;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .contactUs {
   &_chat {
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 50%;
-    padding-top: 5px;
-    padding-right: 65px;
+    padding-top: 5px 65px 0px;
+
+    @media screen and (max-width: 420px) {
+      width: 90vw;
+    }
   }
 
   &_header {
@@ -31,6 +40,13 @@
   &_form {
     width: 50%;
     // padding: 20px 160px 20px 0;
+    @media screen and (max-width: 420px) {
+      width: 100%;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &_form_btn_wrapper {

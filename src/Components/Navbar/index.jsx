@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
 import "./navBar.scss";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,10 +28,18 @@ const Navbar = () => {
         <h3>PRODUCTIONS</h3>
       </div>
       <div className="nav_links">
-        <div className="nav_link_home">Home</div>
-        <div className="nav_link_work">Work</div>
-        <div className="nav_link_about">About</div>
-        <div className="nav_link_contact">Contact</div>
+        <NavLink className="nav_link_home" to="/">
+          Home
+        </NavLink>
+        <NavLink className="nav_link_work" to="/work">
+          Work
+        </NavLink>
+        <NavLink className="nav_link_about" to="/about">
+          About
+        </NavLink>
+        <NavLink className="nav_link_contact" to="/contactus">
+          Contact
+        </NavLink>
       </div>
     </div>
   );

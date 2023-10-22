@@ -15,9 +15,9 @@ const HomepageBanner = () => {
             consectetur.
           </p>
         </div>
-        <div className="banner_btn">
+        {/* <div className="banner_btn">
           <button className="banner_btn_hire_us">Hire Us</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

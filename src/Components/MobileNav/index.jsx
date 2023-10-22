@@ -58,8 +58,8 @@ const MobileNav = () => {
           <NavLink className="mobile_nav_link_home" to="/">
             Home
           </NavLink>
-          <NavLink className="mobile_nav_link_work" to="/work">
-            Work
+          <NavLink className="mobile_nav_link_work" to="/works">
+            Works
           </NavLink>
           <NavLink className="mobile_nav_link_about" to="/about">
             About

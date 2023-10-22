@@ -31,8 +31,8 @@ const Navbar = () => {
         <NavLink className="nav_link_home" to="/">
           Home
         </NavLink>
-        <NavLink className="nav_link_work" to="/work">
-          Work
+        <NavLink className="nav_link_work" to="/works">
+          Works
         </NavLink>
         <NavLink className="nav_link_about" to="/about">
           About

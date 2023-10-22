@@ -22,6 +22,7 @@ const ContactUs = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <>
       {screenWidth > 820 ? <Navbar /> : <MobileNav />}

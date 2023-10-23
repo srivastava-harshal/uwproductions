@@ -5,6 +5,7 @@ import HomepageBanner from "../HomepageBanner";
 import Navbar from "../Navbar";
 import MobileNav from "../MobileNav";
 import Footer from "../Footer";
+import image from "../../assets/architecture/1.jpg";
 
 const onChange = (key) => {
   console.log(key);
@@ -14,7 +15,7 @@ const items = [
   {
     key: "1",
     label: "Architecture",
-    children: "Content of Tab Pane 1",
+    children: <img src={image} style={{ width: "100px" }} />,
   },
   {
     key: "2",

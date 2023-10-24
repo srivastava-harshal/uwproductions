@@ -56,7 +56,7 @@ const Works = () => {
       {screenWidth > 820 ? <Navbar /> : <MobileNav />}
       <HomepageBanner />
       {/* <img src={`url("${Object.values(images)[0].name}")`} /> */}
-      <img src={`${Object.values(image)[0]}`} />
+      <img src={`${Object.values(image)[0]}`} style={{ width: "150px" }} />
       <div className="Works" id="Works">
         <div className="tabs_container">
           <Tabs

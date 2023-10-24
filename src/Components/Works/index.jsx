@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
+import "./Works.scss";
 import { Tabs } from "antd";
 
 import HomepageBanner from "../HomepageBanner";
 import Navbar from "../Navbar";
 import MobileNav from "../MobileNav";
 import Footer from "../Footer";
-import image from "../../assets/architecture/1.jpg";
-// const images = import.meta.glob("../../assets/architecture/*");
+import Architecture from "../Architecture";
 
 const onChange = (key) => {
   console.log(key);
@@ -16,7 +16,8 @@ const items = [
   {
     key: "1",
     label: "Architecture",
-    children: <img src={image} style={{ width: "150px" }} />,
+    children: "Image",
+    children: <Architecture />,
   },
   {
     key: "2",
@@ -55,8 +56,6 @@ const Works = () => {
     <>
       {screenWidth > 820 ? <Navbar /> : <MobileNav />}
       <HomepageBanner />
-      {/* <img src={`url("${Object.values(images)[0].name}")`} /> */}
-      {/* <img src={`${Object.values(image)[0]}`} style={{ width: "150px" }} /> */}
       <div className="Works" id="Works">
         <div className="tabs_container">
           <Tabs

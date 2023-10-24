@@ -5,7 +5,8 @@ import HomepageBanner from "../HomepageBanner";
 import Navbar from "../Navbar";
 import MobileNav from "../MobileNav";
 import Footer from "../Footer";
-import image from "../../assets/architecture/1.jpg";
+// import * as image from "../../assets/architecture";
+const images = import.meta.glob("../../assets/architecture/*");
 
 const onChange = (key) => {
   console.log(key);
@@ -15,7 +16,7 @@ const items = [
   {
     key: "1",
     label: "Architecture",
-    children: <img src={image} style={{ width: "100px" }} />,
+    // children: <img src={image} style={{ width: "100px" }} />,
   },
   {
     key: "2",
@@ -36,6 +37,7 @@ const items = [
 
 const Works = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  console.log(Object.values(images)[0].name);
 
   useEffect(() => {
     const handleResize = () => {
@@ -52,6 +54,7 @@ const Works = () => {
     <>
       {screenWidth > 820 ? <Navbar /> : <MobileNav />}
       <HomepageBanner />
+      <img src={`url("${Object.values(images)[0].name}")`} />
       <div className="Works" id="Works">
         <div className="tabs_container">
           <Tabs

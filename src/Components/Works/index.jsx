@@ -5,7 +5,7 @@ import HomepageBanner from "../HomepageBanner";
 import Navbar from "../Navbar";
 import MobileNav from "../MobileNav";
 import Footer from "../Footer";
-import * as image from "../../assets/architecture/1.jpg";
+import image from "../../assets/architecture/1.jpg";
 // const images = import.meta.glob("../../assets/architecture/*");
 
 const onChange = (key) => {
@@ -16,7 +16,7 @@ const items = [
   {
     key: "1",
     label: "Architecture",
-    // children: <img src={image} style={{ width: "100px" }} />,
+    children: <img src={image} style={{ width: "150px" }} />,
   },
   {
     key: "2",
@@ -56,7 +56,7 @@ const Works = () => {
       {screenWidth > 820 ? <Navbar /> : <MobileNav />}
       <HomepageBanner />
       {/* <img src={`url("${Object.values(images)[0].name}")`} /> */}
-      <img src={`${Object.values(image)[0]}`} style={{ width: "150px" }} />
+      {/* <img src={`${Object.values(image)[0]}`} style={{ width: "150px" }} /> */}
       <div className="Works" id="Works">
         <div className="tabs_container">
           <Tabs

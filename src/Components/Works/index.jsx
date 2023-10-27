@@ -16,7 +16,7 @@ const items = [
   {
     key: "1",
     label: "Architecture",
-    children: "Image",
+    // children: "Image",
     children: <Architecture />,
   },
   {

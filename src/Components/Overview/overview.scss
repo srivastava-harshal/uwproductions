@@ -12,7 +12,8 @@
   &_image {
     // height: 250px;
     width: 95%;
-    object-fit: cover;
+    height: 200px;
+    object-fit: contain;
     border-radius: 20px;
 
     &_container {

@@ -14,23 +14,23 @@ const onChange = (key) => {
 
 const items = [
   {
-    key: "1",
+    key: "architecture",
     label: "Architecture",
     // children: "Image",
     children: <Architecture />,
   },
   {
-    key: "2",
+    key: "concert",
     label: "Concert",
     children: "Content of Tab Pane 2",
   },
   {
-    key: "3",
+    key: "fashion",
     label: "Fashion",
     children: "Content of Tab Pane 3",
   },
   {
-    key: "4",
+    key: "foodProducts",
     label: "Food & Products",
     children: "Content of Tab Pane 4",
   },

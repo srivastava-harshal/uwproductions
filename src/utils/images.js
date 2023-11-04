@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import image1 from "../assets/architecture/interiors 1/Project 1/1.jpg";
-import image2 from "../assets/architecture/interiors 1/Project 1/2.jpg";
+import image12 from "../assets/architecture/interiors 1/Project 2/12.jpg";
 import image3 from "../assets/architecture/interiors 1/Project 1/3.jpg";
 import image4 from "../assets/architecture/interiors 1/Project 1/4.jpg";
 import image5 from "../assets/architecture/interiors 1/Project 1/5.jpg";
@@ -15,7 +15,7 @@ const images = [
   },
   {
     key: uuidv4(),
-    imageURL: image2,
+    imageURL: image12,
   },
   {
     key: uuidv4(),

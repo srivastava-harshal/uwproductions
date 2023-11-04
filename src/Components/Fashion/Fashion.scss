@@ -1,25 +1,15 @@
-#Projects,
-#Project1,
-#Project2,
-#Project3,
-#Project4,
-#Project5 {
-  //   width: 90%;
+#Fashion {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-// .ant-tabs-tab-active {
-//   color: #ededed !important;
-// }
-
-.project {
+.fashion {
   &_image {
     width: 100%;
     height: 300px;
     // border-radius: 10px;
-    // object-fit: contain;
+    object-fit: contain;
 
     &_container {
       width: 30.33%;

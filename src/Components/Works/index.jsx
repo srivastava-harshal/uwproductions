@@ -7,6 +7,9 @@ import Navbar from "../Navbar";
 import MobileNav from "../MobileNav";
 import Footer from "../Footer";
 import Architecture from "../Architecture";
+import Concert from "../Concert";
+import Fashion from "../Fashion";
+import FoodProducts from "../FoodProducts";
 
 const onChange = (key) => {
   console.log(key);
@@ -22,17 +25,17 @@ const items = [
   {
     key: "concert",
     label: "Concert",
-    children: "Content of Tab Pane 2",
+    children: <Concert />,
   },
   {
     key: "fashion",
     label: "Fashion",
-    children: "Content of Tab Pane 3",
+    children: <Fashion />,
   },
   {
     key: "foodProducts",
     label: "Food & Products",
-    children: "Content of Tab Pane 4",
+    children: <FoodProducts />,
   },
 ];
 

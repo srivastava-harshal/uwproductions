@@ -4,6 +4,9 @@ import { Tabs } from "antd";
 
 import Project1 from "./Project1";
 import Project2 from "./Project2";
+import Project3 from "./Project3";
+import Project4 from "./Project4";
+import Project5 from "./Project5";
 
 const onChange = (key) => {
   console.log(key);
@@ -24,17 +27,17 @@ const items = [
   {
     key: "project3",
     label: "Project 3",
-    children: "Content of Tab Pane 3",
+    children: <Project3 />,
   },
   {
     key: "project4",
     label: "Project 4",
-    children: "Content of Tab Pane 4",
+    children: <Project4 />,
   },
   {
     key: "project5",
     label: "Project 5",
-    children: "Content of Tab Pane 4",
+    children: <Project5 />,
   },
 ];
 

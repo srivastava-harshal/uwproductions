@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./getInTouch.scss";
 import { Input, Form, Select } from "antd";
 
 const GetInTouch = () => {
   const { TextArea } = Input;
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    services: "",
+    message: "",
+  });
+
+  // Step 3: Attach onChange handlers to update the state
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Step 4: Attach onClick handler to log the form data
+  const handleSubmit = () => {
+    console.log("Form Data:", formData);
+  };
 
   return (
     <div className="GetInTouch" id="GetInTouch">
@@ -28,25 +49,32 @@ const GetInTouch = () => {
             }}
           >
             <Form.Item label="Name">
-              <Input />
+              <Input name="name" onChange={handleInputChange} />
             </Form.Item>
             <Form.Item label="Email">
-              <Input />
+              <Input name="email" onChange={handleInputChange} />
             </Form.Item>
             <Form.Item label="Services">
-              <Select>
+              <Select
+                name="services"
+                onChange={(value) =>
+                  handleInputChange({ target: { name: "services", value } })
+                }
+              >
                 <Select.Option value="realEstate">Real Estate</Select.Option>
                 <Select.Option value="weddings">Weddings</Select.Option>
                 <Select.Option value="portraits">Portraits</Select.Option>
               </Select>
             </Form.Item>
             <Form.Item label="Message">
-              <TextArea rows={4} />
+              <TextArea rows={4} name="message" onChange={handleInputChange} />
             </Form.Item>
           </Form>
           <div className="contactUs_form_btn_wrapper">
             <div className="contactUs_form_btn_container">
-              <div className="contactUs_form_btn">Let's Do This!</div>
+              <div className="contactUs_form_btn" onClick={handleSubmit}>
+                Let's Do This!
+              </div>
             </div>
           </div>
         </div>

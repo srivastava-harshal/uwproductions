@@ -1,5 +1,12 @@
 import React from "react";
 import "./Concert.scss";
+import LightGallery from "lightgallery/react";
+
+import "lightgallery/scss/lightgallery.scss";
+import "lightgallery/scss/lg-zoom.scss";
+
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
 
 import image1 from "../../assets/concert/1.jpg";
 import image2 from "../../assets/concert/2.jpg";
@@ -21,6 +28,10 @@ import image17 from "../../assets/concert/17.jpg";
 import image18 from "../../assets/concert/18.jpg";
 
 const Concert = () => {
+  const onInit = () => {
+    console.log("lightGallery has been initialized");
+  };
+
   const images = [
     image1,
     image2,
@@ -44,13 +55,22 @@ const Concert = () => {
 
   return (
     <div className="Concert" id="Concert">
-      {images.map((image) => {
-        return (
-          <div className="concert_image_container">
-            <img className="concert_image" src={image} />
-          </div>
-        );
-      })}
+      <LightGallery
+        onInit={onInit}
+        speed={500}
+        plugins={[lgThumbnail, lgZoom]}
+        elementClassNames="lightgallery_container"
+      >
+        {images.map((image) => {
+          return (
+            <a href={image}>
+              <div className="concert_image_container">
+                <img className="concert_image" src={image} />
+              </div>
+            </a>
+          );
+        })}
+      </LightGallery>
     </div>
   );
 };

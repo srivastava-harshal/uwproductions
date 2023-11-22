@@ -1,5 +1,12 @@
 import React from "react";
 import "./Fashion.scss";
+import LightGallery from "lightgallery/react";
+
+import "lightgallery/scss/lightgallery.scss";
+import "lightgallery/scss/lg-zoom.scss";
+
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
 
 // import image1 from "../../assets/fashion/1.jpg";
 import image2 from "../../assets/fashion/2.jpg";
@@ -14,6 +21,10 @@ import image10 from "../../assets/fashion/10.jpg";
 import image11 from "../../assets/fashion/11.jpg";
 
 const Fashion = () => {
+  const onInit = () => {
+    console.log("lightGallery has been initialized");
+  };
+
   const images = [
     // image1,
     image2,
@@ -30,13 +41,22 @@ const Fashion = () => {
 
   return (
     <div className="Fashion" id="Fashion">
-      {images.map((image) => {
-        return (
-          <div className="fashion_image_container">
-            <img className="fashion_image" src={image} />
-          </div>
-        );
-      })}
+      <LightGallery
+        onInit={onInit}
+        speed={500}
+        plugins={[lgThumbnail, lgZoom]}
+        elementClassNames="lightgallery_container"
+      >
+        {images.map((image) => {
+          return (
+            <a href={image}>
+              <div className="fashion_image_container">
+                <img className="fashion_image" src={image} />
+              </div>
+            </a>
+          );
+        })}
+      </LightGallery>
     </div>
   );
 };

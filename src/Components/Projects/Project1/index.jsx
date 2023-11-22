@@ -1,5 +1,11 @@
 import React from "react";
-// import "./Project1.scss";
+import LightGallery from "lightgallery/react";
+
+import "lightgallery/scss/lightgallery.scss";
+import "lightgallery/scss/lg-zoom.scss";
+
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
 
 import image1 from "../../../assets/architecture/interiors 1/Project 1/1.jpg";
 // import image2 from "../../assets/architecture/interiors 1/Project 1/2.jpg";
@@ -13,6 +19,10 @@ import image9 from "../../../assets/architecture/interiors 1/Project 1/9.jpg";
 import image10 from "../../../assets/architecture/interiors 1/Project 1/10.jpg";
 
 const Project1 = () => {
+  const onInit = () => {
+    console.log("lightGallery has been initialized");
+  };
+
   const images = [
     image1,
     image3,
@@ -27,13 +37,22 @@ const Project1 = () => {
 
   return (
     <div className="Project1" id="Project1">
-      {images.map((image) => {
-        return (
-          <div className="project_image_container">
-            <img className="project_image" src={image} />
-          </div>
-        );
-      })}
+      <LightGallery
+        onInit={onInit}
+        speed={500}
+        plugins={[lgThumbnail, lgZoom]}
+        elementClassNames="lightgallery_container"
+      >
+        {images.map((image) => {
+          return (
+            <a href={image}>
+              <div className="project_image_container">
+                <img className="project_image" src={image} />
+              </div>
+            </a>
+          );
+        })}
+      </LightGallery>
     </div>
   );
 };

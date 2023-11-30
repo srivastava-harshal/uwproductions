@@ -1,32 +1,29 @@
 import React from "react";
 import "./testimonial.scss";
-import { Avatar, Space } from "antd";
 
-const Testimonails = () => {
+import testimonials from "./testimonials";
+import ReactCardCarousel from "react-card-carousel";
+
+const Testimonials = () => {
   return (
-    <div className="testimonial_container">
-      <div className="testimonial_image">
-        <Space size={16} wrap>
-          <Avatar
-            style={{
-              backgroundColor: "#87d068",
-              height: "80px",
-              width: "80px",
-            }}
-            // icon={<UserOutlined />}
-          />
-        </Space>
-      </div>
-      <div className="testimonial_review">
-        <p className="testimonial_review_header">Anuj Pratap Singh</p>
-        <p className="testimonial_review_content">
-          WE HAD A GREAT EXPERIENCE WITH NG PRODUCTIONS. NAMAN AND BRANDON WERE
-          SO HELPFUL BEFORE, DURING, AND AFTER FILMING. OUR VIDEOS TURNED OUT
-          AMAZING. WOULD DEFINITELY RECOMMEND THEM!
-        </p>
-      </div>
+    <div className="testimonials_wrapper">
+      <ReactCardCarousel autoplay={false} autoplay_speed={2500}>
+        {testimonials.map(({ userName, imageURL, testimonial }) => {
+          return (
+            <div className="testimonials_container">
+              <div className="testimonials_img_container">
+                <img src={imageURL} className="testimonials_user_img" />
+              </div>
+              <div className="testimonials_content_container">
+                <div className="testimonials_user_name">{userName}</div>
+                <div className="testimonials_user_review">{testimonial}</div>
+              </div>
+            </div>
+          );
+        })}
+      </ReactCardCarousel>
     </div>
   );
 };
 
-export default Testimonails;
+export default Testimonials;

@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 2;
+  z-index: 3;
   padding: 15px 0;
   background: transparent;
   color: #e4e4e4;
@@ -16,7 +16,7 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 2;
+  z-index: 3;
   padding: 15px 0;
   background-color: #ededed;
 }
@@ -54,6 +54,7 @@
 
 .active {
   font-weight: 600;
+  font-size: 2rem;
 }
 
 .ant-drawer-close {

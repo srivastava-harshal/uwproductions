@@ -5,13 +5,10 @@ import HomepageBanner from "../HomepageBanner";
 import Navbar from "../Navbar";
 import MobileNav from "../MobileNav";
 import Overview from "../Overview";
-import CarouselComp from "../Caraousel/Carousel";
 import HomepageFooter from "../HomepageFooter";
-import images from "../../utils/caraouselImages";
+import Testimonials from "../Testimonial";
 
 const Home = () => {
-  const slides = images;
-
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -31,7 +28,7 @@ const Home = () => {
       {screenWidth > 820 ? <Navbar /> : <MobileNav />}
       <HomepageBanner />
       <Overview />
-      <CarouselComp slides={slides} />
+      <Testimonials />
       <HomepageFooter />
     </>
   );

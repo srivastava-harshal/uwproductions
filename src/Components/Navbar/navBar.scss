@@ -1,5 +1,5 @@
 .Navbar {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,7 +14,7 @@
   &_Scrolled {
     background-color: #ededed;
     color: #000000;
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     top: 0;
     left: 0;
@@ -31,7 +31,7 @@
     width: 40%;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: baseline;
   }
 
   &_link_home,

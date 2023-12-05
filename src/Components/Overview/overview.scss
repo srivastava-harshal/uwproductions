@@ -10,14 +10,13 @@
 
 .overview {
   &_image {
-    // height: 250px;
     width: 95%;
-    height: 200px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 20px;
 
     &_container {
       display: flex !important;
+      flex-grow: 1;
       justify-content: center;
     }
   }

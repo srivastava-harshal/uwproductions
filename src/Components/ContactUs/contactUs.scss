@@ -1,11 +1,32 @@
 #ContactUs {
   display: flex;
   padding: 100px 120px 85px;
+  gap: 50px;
 
   @media screen and (max-width: 420px) {
     padding: 50px 0;
     flex-direction: column;
     align-items: center;
+  }
+
+  @media screen and (min-width: 1750px) and (max-width: 2000px) {
+    padding: 100px 200px 85px;
+  }
+
+  @media screen and (min-width: 2001px) and (max-width: 2250px) {
+    padding: 100px 250px 85px;
+  }
+
+  @media screen and (min-width: 2251px) and (max-width: 2500px) {
+    padding: 100px 400px 85px;
+  }
+
+  @media screen and (min-width: 2501px) and (max-width: 2750px) {
+    padding: 100px 500px 85px;
+  }
+
+  @media screen and (min-width: 2751px) and (max-width: 3000px) {
+    padding: 100px 650px 85px;
   }
 }
 
@@ -15,7 +36,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-top: 5px 65px 0px;
+    // padding-top: 5px 65px 0px;
 
     @media screen and (max-width: 420px) {
       width: 90vw;
@@ -52,7 +73,7 @@
   &_form_btn_wrapper {
     display: flex;
     justify-content: end;
-    padding: 0 70px;
+    padding-right: 22%;
 
     @media screen and (max-width: 420px) {
       justify-content: center;

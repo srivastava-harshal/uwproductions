@@ -52,9 +52,11 @@ const ContactUs = () => {
             }}
             layout="horizontal"
             //   disabled={componentDisabled}
-            style={{
-              width: window.innerWidth > 820 ? 700 : "90vw",
-            }}
+            style={
+              {
+                // width: window.innerWidth > 820 ? 700 : "90vw",
+              }
+            }
           >
             <Form.Item label="Name">
               <Input />

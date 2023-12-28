@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./getInTouch.scss";
 import { Input, Form, Select } from "antd";
+import axios from "axios";
 
 const GetInTouch = () => {
   const { TextArea } = Input;
@@ -21,17 +22,35 @@ const GetInTouch = () => {
     });
   };
 
-  // Step 4: Attach onClick handler to log the form data
-  const handleSubmit = () => {
-    console.log("Form Data:", formData);
+  const handleSubmit = async () => {
+    try {
+      // Make a POST request to the server to send the email
+      const response = await axios.post("/send-email", formData);
+
+      console.log("Server Response:", response.data);
+
+      // Optionally, you can show a success message to the user
+      // or navigate to a success page.
+    } catch (error) {
+      console.error("Error sending email:", error);
+      // Handle error, show an error message, etc.
+    }
   };
 
   return (
     <div className="GetInTouch" id="GetInTouch">
       <div className="getInTouch_wrapper">
         <div className="getInTouch_container">
-          <p className="getInTouch_header">Get In Touch!</p>
-          <p className="getInTouch_sub_header">Discuss the project</p>
+          <div
+            style={{ width: "100%", display: "flex", justifyContent: "end" }}
+          >
+            <p className="getInTouch_header">Get In Touch!</p>
+          </div>
+          <div
+            style={{ width: "100%", display: "flex", justifyContent: "end" }}
+          >
+            <p className="getInTouch_sub_header">Discuss the project</p>
+          </div>
         </div>{" "}
         <div className="getInTouch_contactUs_form">
           <Form
@@ -44,7 +63,7 @@ const GetInTouch = () => {
             layout="horizontal"
             //   disabled={componentDisabled}
             style={{
-              width: window.innerWidth > 820 ? 500 : "90vw",
+              // width: window.innerWidth > 820 ? 500 : "90vw",
               padding: "20px 0",
             }}
           >

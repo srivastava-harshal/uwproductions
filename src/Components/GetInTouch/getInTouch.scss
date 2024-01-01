@@ -21,6 +21,7 @@
     gap: 20px;
 
     @media screen and (max-width: 420px) {
+      width: 90%;
       flex-direction: column;
       align-items: center;
       padding: 10px 10px 30px 10px;
@@ -69,6 +70,11 @@
     flex-direction: column;
     align-items: center;
     padding: 80px 20px;
+
+    @media screen and (max-width: 420px) {
+      width: unset;
+      padding: 0;
+    }
   }
 
   &_header {
@@ -132,5 +138,9 @@
 .ant-row.ant-form-item-row {
   justify-content: start;
   gap: 20px;
+
+  @media screen and (max-width: 420px) {
+    gap: 0;
+  }
   // width: 70%;
 }

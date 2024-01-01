@@ -25,6 +25,10 @@
     display: flex;
     justify-content: center;
 
+    @media screen and (max-width: 420px) {
+      padding-bottom: 25px;
+    }
+
     &_text {
       font-size: 2.5rem;
       letter-spacing: 4px;
@@ -41,7 +45,7 @@
   bottom: -25px;
 
   @media screen and (max-width: 420px) {
-    bottom: 25px;
+    // bottom: 15px;
   }
 }
 

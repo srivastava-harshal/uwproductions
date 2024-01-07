@@ -6,7 +6,7 @@ import Navbar from "../Navbar";
 import MobileNav from "../MobileNav";
 import Overview from "../Overview";
 import HomepageFooter from "../HomepageFooter";
-import Testimonials from "../Testimonial";
+// import Testimonials from "../Testimonial";
 
 const Home = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -28,7 +28,7 @@ const Home = () => {
       {screenWidth > 820 ? <Navbar /> : <MobileNav />}
       <HomepageBanner />
       <Overview />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <HomepageFooter />
     </>
   );

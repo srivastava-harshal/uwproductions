@@ -2,12 +2,12 @@ import React from "react";
 import "./testimonial.scss";
 // @ts-ignore
 import testimonials from "./testimonials";
-import ReactCardCarousel from "react-card-carousel";
+// import ReactCardCarousel from "react-card-carousel";
 
 const Testimonials = () => {
   return (
     <div className="testimonials_wrapper">
-      <ReactCardCarousel autoplay={false} autoplay_speed={2500}>
+      {/* <ReactCardCarousel autoplay={false} autoplay_speed={2500}>
         {testimonials.map(({ userName, imageURL, testimonial, key }) => {
           return (
             <div className="testimonials_container" key={key}>
@@ -25,7 +25,7 @@ const Testimonials = () => {
             </div>
           );
         })}
-      </ReactCardCarousel>
+      </ReactCardCarousel> */}
     </div>
   );
 };

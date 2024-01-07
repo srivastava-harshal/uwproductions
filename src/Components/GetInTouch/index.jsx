@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./getInTouch.scss";
 import { Input, Form, Select } from "antd";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
+// import axios from "axios";
 
 const GetInTouch = () => {
   const { TextArea } = Input;
+  const formRef = useRef();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -22,15 +24,30 @@ const GetInTouch = () => {
     });
   };
 
+  const sendEmail = (e) => {
+    // service_eltv65i
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_eltv65i",
+        "template_yc68cb7",
+        form.current,
+        "VU8Zckgr8QXfR77ps"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   const handleSubmit = async () => {
     try {
-      // Make a POST request to the server to send the email
-      const response = await axios.post("/send-email", formData);
-
-      console.log("Server Response:", response.data);
-
-      // Optionally, you can show a success message to the user
-      // or navigate to a success page.
+      sendEmail();
     } catch (error) {
       console.error("Error sending email:", error);
       // Handle error, show an error message, etc.
@@ -54,6 +71,7 @@ const GetInTouch = () => {
         </div>{" "}
         <div className="getInTouch_contactUs_form">
           <Form
+            ref={formRef}
             labelCol={{
               span: 4,
             }}
@@ -68,10 +86,10 @@ const GetInTouch = () => {
             }}
           >
             <Form.Item label="Name">
-              <Input name="name" onChange={handleInputChange} />
+              <Input name="from_name" onChange={handleInputChange} />
             </Form.Item>
             <Form.Item label="Email">
-              <Input name="email" onChange={handleInputChange} />
+              <Input name="from_email" onChange={handleInputChange} />
             </Form.Item>
             <Form.Item label="Services">
               <Select

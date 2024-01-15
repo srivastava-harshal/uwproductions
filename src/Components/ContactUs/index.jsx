@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./contactUs.scss";
-import { Input, Form, Select } from "antd";
+import emailjs from "@emailjs/browser";
 
 import HomepageBanner from "../HomepageBanner";
 import Navbar from "../Navbar";
@@ -9,7 +9,52 @@ import Footer from "../Footer";
 
 const ContactUs = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const { TextArea } = Input;
+  const formRef = useRef();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    services: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const sendEmail = (e) => {
+    // service_eltv65i
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_eltv65i",
+        "template_yc68cb7",
+        formRef.current,
+        "VU8Zckgr8QXfR77ps"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const handleSubmit = async (e) => {
+    try {
+      sendEmail(e);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      // Handle error, show an error message, etc.
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,44 +87,57 @@ const ContactUs = () => {
             <a href="#">@gmail.com</a>
           </p>
         </div>
-        <div className="contactUs_form">
-          <Form
-            labelCol={{
-              span: 4,
-            }}
-            wrapperCol={{
-              span: 14,
-            }}
-            layout="horizontal"
-            //   disabled={componentDisabled}
-            style={
-              {
-                // width: window.innerWidth > 820 ? 700 : "90vw",
-              }
-            }
-          >
-            <Form.Item label="Name">
-              <Input />
-            </Form.Item>
-            <Form.Item label="Email">
-              <Input />
-            </Form.Item>
-            <Form.Item label="Services">
-              <Select>
-                <Select.Option value="realEstate">Real Estate</Select.Option>
-                <Select.Option value="weddings">Weddings</Select.Option>
-                <Select.Option value="portraits">Portraits</Select.Option>
-              </Select>
-            </Form.Item>
-            <Form.Item label="Message">
-              <TextArea rows={4} />
-            </Form.Item>
-          </Form>
-          <div className="contactUs_form_btn_wrapper">
-            <div className="contactUs_form_btn_container">
-              <div className="contactUs_form_btn">Let's Do This!</div>
+        <div className="contactUs_formContainer">
+          <form className="contactUs_form" ref={formRef}>
+            <label className="contactUs_formLabel" label="Name">
+              Name:
+              <input
+                className="contactUs_formInput"
+                name="from_name"
+                onChange={handleInputChange}
+              />
+            </label>
+            <label className="contactUs_formLabel" label="Email">
+              Email:
+              <input
+                className="contactUs_formInput"
+                name="from_email"
+                onChange={handleInputChange}
+              />
+            </label>
+            <label className="contactUs_formLabel" label="Services">
+              Services:
+              <select
+                className="contactUs_formInput"
+                name="services"
+                onChange={(value) =>
+                  handleInputChange({ target: { name: "services", value } })
+                }
+              >
+                <option value="realEstate">Real Estate</option>
+                <option value="weddings">Weddings</option>
+                <option value="portraits">Portraits</option>
+              </select>
+            </label>
+            <label className="contactUs_formLabel" label="Message">
+              Message:
+              <textarea
+                className="contactUs_formInput"
+                rows={4}
+                name="message"
+                onChange={handleInputChange}
+              />
+            </label>
+            <div className="contactUs_form_btnContainer">
+              <button
+                className="contactUs_form_btn"
+                type="primary"
+                onClick={handleSubmit}
+              >
+                Let's Do This!
+              </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <Footer />

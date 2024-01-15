@@ -8,11 +8,11 @@
 }
 
 .homepage_footer_whiteBG {
-  margin-top: 50px;
+  // margin-top: 50px;
   background-color: white;
-  height: 400px;
+  height: 300px;
 
   @media screen and (max-width: 420px) {
-    margin-bottom: 350px;
+    margin-bottom: 100px;
   }
 }

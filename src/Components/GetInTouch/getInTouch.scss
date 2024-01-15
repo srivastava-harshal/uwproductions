@@ -9,6 +9,10 @@
     width: 100%;
     left: 0;
   }
+
+  @media screen and (min-width: 421px) and (max-width: 1000px) {
+    top: 0;
+  }
 }
 
 .getInTouch {
@@ -29,39 +33,71 @@
   }
 
   &_contactUs {
-    &_form {
+    &_formContainer {
       width: 70%;
       // padding-right: 100px;
+      @media screen and (max-width: 420px) {
+        width: 90%;
+      }
     }
 
-    // &_chat {
-    //   display: flex;
-    //   flex-direction: column;
-    //   gap: 20px;
-    //   width: 50%;
-    //   padding-top: 5px;
-    //   padding-right: 65px;
-    // }
+    &_form {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding-right: 80px;
 
-    // &_header {
-    //   font-size: 2.5rem;
-    //   font-weight: 200;
-    // }
+      @media screen and (max-width: 420px) {
+        padding-right: 0;
+        gap: 10px;
+      }
 
-    // &_sub_header {
-    //   font-size: 1.2rem;
-    //   font-weight: 700;
-    // }
+      @media screen and (min-width: 421px) and (max-width: 1000px) {
+        padding-right: 30px;
+        // gap: 10px;
+      }
 
-    // &_form_request {
-    //   font-size: 1.2rem;
-    //   font-weight: 300;
-    // }
+      &_btnContainer {
+        display: flex;
+        justify-content: end;
+      }
 
-    // &_form {
-    //   // width: 60%;
-    //   // padding: 20px 160px 20px 0;
-    // }
+      &_btn {
+        width: 25%;
+        padding: 10px;
+        background: black;
+        color: white;
+        border-radius: 5px;
+        border-collapse: collapse;
+        border: none;
+        cursor: pointer;
+
+        @media screen and (max-width: 420px) {
+          width: 40%;
+        }
+
+        @media screen and (min-width: 421px) and (max-width: 1000px) {
+          width: 40%;
+          // gap: 10px;
+        }
+      }
+    }
+
+    &_formLabel {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    &_formInput {
+      width: 100%;
+      border-radius: 5px;
+      border-collapse: collapse;
+      border: 1px solid;
+      padding: 5px 10px;
+      font-size: 16px;
+    }
   }
 
   &_container {
@@ -90,51 +126,6 @@
   }
 }
 
-// .contactUs {
-//   &_form_btn_wrapper {
-//     display: flex;
-//     justify-content: end;
-//     // padding: 0 130px;
-//     padding: 0 130px !important;
-
-//     @media screen and (max-width: 420px) {
-//       justify-content: center;
-//     }
-//   }
-
-//   &_form_btn_container {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 180px;
-//     height: 50px;
-//     background-color: black;
-//     color: white;
-//     border-radius: 10px;
-//     border: none;
-//     cursor: pointer;
-//   }
-
-//   &_form_btn {
-//     // padding: 20px 160px 20px 0;
-//     font-size: 20px;
-//   }
-// }
-
-// .ant-form-item-row {
-//   display: flex;
-//   justify-content: space-between;
-// }
-
-// .ant-form-item .ant-form-item-label {
-//   overflow: unset;
-//   text-align: start;
-// }
-
-// .ant-form-horizontal .ant-form-item-control {
-//   min-width: 300px;
-// }
-
 .ant-row.ant-form-item-row {
   justify-content: start;
   gap: 20px;
@@ -142,5 +133,4 @@
   @media screen and (max-width: 420px) {
     gap: 0;
   }
-  // width: 70%;
 }

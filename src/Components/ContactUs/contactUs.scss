@@ -58,44 +58,69 @@
     font-weight: 300;
   }
 
+  &_formContainer {
+    width: 70%;
+    // padding-right: 100px;
+    @media screen and (max-width: 420px) {
+      width: 90%;
+    }
+  }
+
   &_form {
-    width: 50%;
-    // padding: 20px 160px 20px 0;
-    @media screen and (max-width: 420px) {
-      width: 100%;
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  &_form_btn_wrapper {
+    height: 100%;
     display: flex;
-    justify-content: end;
-    padding-right: 22%;
+    gap: 20px;
+    flex-direction: column;
+    padding-right: 80px;
 
     @media screen and (max-width: 420px) {
-      justify-content: center;
       padding-right: 0;
+      gap: 10px;
+    }
+
+    @media screen and (min-width: 421px) and (max-width: 1000px) {
+      padding-right: 30px;
+      // gap: 10px;
+    }
+
+    &_btnContainer {
+      display: flex;
+      justify-content: end;
+    }
+
+    &_btn {
+      width: 25%;
+      padding: 10px;
+      background: black;
+      color: white;
+      border-radius: 5px;
+      border-collapse: collapse;
+      border: none;
+      cursor: pointer;
+
+      @media screen and (max-width: 420px) {
+        width: 40%;
+      }
+
+      @media screen and (min-width: 421px) and (max-width: 1000px) {
+        width: 40%;
+        // gap: 10px;
+      }
     }
   }
 
-  &_form_btn_container {
+  &_formLabel {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 140px;
-    height: 30px;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
+    gap: 25px;
   }
 
-  &_form_btn {
-    // padding: 20px 160px 20px 0;
-    font-size: 15px;
+  &_formInput {
+    width: 100%;
+    border-radius: 5px;
+    border-collapse: collapse;
+    border: 1px solid;
+    padding: 5px 10px;
+    font-size: 16px;
   }
 }

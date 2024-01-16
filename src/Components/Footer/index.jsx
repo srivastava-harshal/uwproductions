@@ -49,7 +49,7 @@ const Footer = () => {
           <div className="footer_info_contactUs">
             <p>2/14, Sector L, Aashiyana</p>
             <p>Mobile: 7754929269</p>
-            <p>uwproductions7754@gmail.com</p>
+            {/* <p>uwproductions7754@gmail.com</p> */}
           </div>
         </div>
         <div className="footer_info_right_section">
@@ -57,7 +57,7 @@ const Footer = () => {
             <p className="footer_info_information_header">Information</p>
           </div>
           <div className="footer_info_information">
-            <a className="footer_info_information_link">Terms And Conditions</a>
+            {/* <a className="footer_info_information_link">Terms And Conditions</a> */}
             <a className="footer_info_information_link">Privacy Policy</a>
             <a className="footer_info_information_link">New Artists Sign-Up</a>
           </div>

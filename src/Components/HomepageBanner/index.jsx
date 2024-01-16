@@ -6,7 +6,7 @@ const HomepageBanner = () => {
     <div className="HomepageBanner" id="HomepageBanner">
       <div className="banner_container">
         <div className="banner_header">
-          <div>
+          {/* <div>
             <p className="banner_header_text">
               Lorem ipsum dolor sit amet consectetur.
             </p>
@@ -21,7 +21,7 @@ const HomepageBanner = () => {
             <p className="banner_sub_header_text">
               Lorem ipsum dolor sit amet consectetur.
             </p>
-          </div>
+          </div> */}
         </div>
         {/* <div className="banner_btn">
           <button className="banner_btn_hire_us">Hire Us</button>

@@ -84,7 +84,9 @@ const ContactUs = () => {
           </p>
           <p className="contactUs_mail">
             Or if you prefer, you can chat with us directly at{" "}
-            <a href="#">@gmail.com</a>
+            <a href="mailto:uwproductions7754@gmail.com">
+              uwproductions7754@gmail.com
+            </a>
           </p>
         </div>
         <div className="contactUs_formContainer">

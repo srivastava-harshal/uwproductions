@@ -47,9 +47,9 @@ const Footer = () => {
             <p className="footer_info_contactUs_header">Contact Us</p>
           </div>
           <div className="footer_info_contactUs">
-            <p>Address</p>
-            <p>Phone Number</p>
-            <p>Email</p>
+            <p>2/14, Sector L, Aashiyana</p>
+            <p>Mobile: 7754929269</p>
+            <p>uwproductions7754@gmail.com</p>
           </div>
         </div>
         <div className="footer_info_right_section">

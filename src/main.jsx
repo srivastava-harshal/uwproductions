@@ -11,6 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         components: {
           Tabs: {
             // cardBg: "red",
+            inkBarColor: "grey",
             itemColor: "grey",
             itemSelectedColor: "black",
           },

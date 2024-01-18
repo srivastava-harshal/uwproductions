@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.scss";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -30,7 +31,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="footer_social_link">
-              <a>
+              <a href="https://www.instagram.com/ultrawide.productions/">
                 <img
                   className="footer_social_link_image"
                   src="https://cdn-icons-png.flaticon.com/512/87/87390.png"
@@ -59,7 +60,9 @@ const Footer = () => {
           <div className="footer_info_information">
             {/* <a className="footer_info_information_link">Terms And Conditions</a> */}
             <a className="footer_info_information_link">Privacy Policy</a>
-            <a className="footer_info_information_link">New Artists Sign-Up</a>
+            <NavLink to="/contactus" className="footer_info_information_link">
+              New Artists Sign-Up
+            </NavLink>
           </div>
         </div>
       </div>

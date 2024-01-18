@@ -1,0 +1,40 @@
+#About {
+  padding: 50px 300px;
+
+  @media screen and (max-width: 430px) {
+    padding: 50px 20px;
+  }
+
+  @media screen and (min-width: 431px) and (max-width: 1400px) {
+    padding: 50px 20px;
+  }
+}
+
+.about {
+  &_header {
+    padding: 20px 0;
+  }
+
+  &_subHeader {
+    &_content {
+      padding: 20px 0;
+      color: #555555;
+    }
+  }
+
+  &_content {
+    padding: 10px 0;
+    color: #555555;
+  }
+
+  &_subHeader_content {
+    padding: 10px 0;
+    color: #555555;
+  }
+
+  &_content_title {
+    font-size: 18px;
+    color: #000;
+    font-weight: 800;
+  }
+}

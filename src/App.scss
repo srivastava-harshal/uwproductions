@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400&display=swap");
 
+#root {
+  @media screen and (min-width: 2000px) and (max-width: 2500px) {
+    margin: 0 300px;
+  }
+  @media screen and (min-width: 2501px) {
+    margin: 0 500px;
+  }
+}
+
 body,
 p,
 h1,

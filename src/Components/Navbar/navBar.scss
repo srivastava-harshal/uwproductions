@@ -3,13 +3,20 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100% - 240px);
+  width: -webkit-fill-available;
   padding: 30px 120px 20px;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   background-color: transparent;
   color: rgb(153, 152, 152);
+
+  @media screen and (min-width: 2000px) and (max-width: 2500px) {
+    margin: 0 300px;
+  }
+  @media screen and (min-width: 2501px) {
+    margin: 0 500px;
+  }
 
   &_Scrolled {
     background-color: #ededed;
@@ -18,11 +25,18 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - 240px);
+    width: -webkit-fill-available;
     padding: 30px 120px 20px;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (min-width: 2000px) and (max-width: 2500px) {
+      margin: 0 300px;
+    }
+    @media screen and (min-width: 2501px) {
+      margin: 0 500px;
+    }
   }
 }
 

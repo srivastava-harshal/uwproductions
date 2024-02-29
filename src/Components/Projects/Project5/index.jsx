@@ -50,11 +50,11 @@ const Project5 = () => {
       >
         {images.map((image) => {
           return (
-            <a href={image}>
-              <div className="project_image_container">
+            <div className="project_image_container">
+              <a href={image}>
                 <img className="project_image" src={image} />
-              </div>
-            </a>
+              </a>
+            </div>
           );
         })}
       </LightGallery>

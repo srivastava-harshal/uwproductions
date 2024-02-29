@@ -18,14 +18,20 @@
   &_image {
     width: 100%;
     height: 300px;
-    // border-radius: 10px;
-    // object-fit: contain;
+    object-fit: cover;
+
+    @media screen and (max-width: 768px) {
+      height: 200px;
+    }
 
     &_container {
-      // display: block;
-      width: 100%;
       margin: 10px 0;
-      //   display: flex;
+      flex-basis: calc(33.33% - 10px);
+
+      @media screen and (max-width: 768px) {
+        margin: 5px 0;
+        flex-basis: calc(100% - 10px);
+      }
     }
   }
 }
@@ -33,8 +39,13 @@
 .lightgallery_container {
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+  // flex-wrap: wrap;
 }
 
 .lg-thumb-item {

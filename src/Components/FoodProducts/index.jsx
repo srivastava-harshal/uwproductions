@@ -32,11 +32,11 @@ const FoodProducts = () => {
       >
         {images.map((image) => {
           return (
-            <a href={image}>
-              <div className="foodProducts_image_container">
+            <div className="foodProducts_image_container">
+              <a href={image}>
                 <img className="foodProducts_image" src={image} />
-              </div>
-            </a>
+              </a>
+            </div>
           );
         })}
       </LightGallery>

@@ -2,6 +2,9 @@
   display: flex;
   // justify-content: center;
   margin: 50px 0;
+  @media screen and (max-width: 768px) {
+    padding: 0 10px;
+  }
 }
 
 .tabs_container {

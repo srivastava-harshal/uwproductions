@@ -63,11 +63,11 @@ const Concert = () => {
       >
         {images.map((image) => {
           return (
-            <a href={image}>
-              <div className="concert_image_container">
+            <div className="concert_image_container">
+              <a href={image}>
                 <img className="concert_image" src={image} />
-              </div>
-            </a>
+              </a>
+            </div>
           );
         })}
       </LightGallery>
